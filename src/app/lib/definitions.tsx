@@ -3,7 +3,6 @@ import * as React from 'react';
 export type NavLink = {
     name: string;
     href: string;
-    pathname?: string;
     subLinks?: NavLink[];
 }
 

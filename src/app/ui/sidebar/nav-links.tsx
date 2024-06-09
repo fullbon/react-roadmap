@@ -23,7 +23,9 @@ const links = [
 ];
 
 function NavLink(link: NavLinkType) {
-    const isActiveLink = link.pathname.indexOf(link.href) !== -1;
+    const pathname = usePathname();
+
+    const isActiveLink = pathname.indexOf(link.href) !== -1;
 
     const [openSubLinks, setOpenSubLinks] = React.useState(isActiveLink);
 
@@ -63,11 +65,10 @@ function NavLink(link: NavLinkType) {
             {
                 openSubLinks
                     ? <div className="pl-5">
-                        {link.subLinks?.map((subLink) => {
+                        {link.subLinks?.map((subLink: NavLinkType) => {
                             return <NavLink
                                 key={subLink.href}
-                                pathname={link.pathname}
-                                name={link.name}
+                                {...subLink}
                                 href={link.href + subLink.href}
                             />
                         })}
@@ -79,15 +80,12 @@ function NavLink(link: NavLinkType) {
 }
 
 export default function NavLinks() {
-    const pathname = usePathname();
-
     return (
         <>
             {
                 links.map((link: NavLinkType) => {
                     return <NavLink
                         key={link.href}
-                        pathname={pathname}
                         {...link}
                     />
                 })
