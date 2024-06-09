@@ -2,7 +2,7 @@ import * as React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import SideNav from '@/app/ui/sidebar/SideNav';
+import Sidenav from '@/app/ui/sidebar/sidenav';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,9 +24,9 @@ export default function RootLayout({
         <body className={inter.className}>
             <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
                 <div className="w-full flex-none md:w-64">
-                    <SideNav />
+                    <Sidenav />
                 </div>
-                <div className="flex-grow p-6 md:overflow-y-auto md:p-12 content">{children}</div>
+                <div className="flex-grow p-6 md:overflow-y-auto md:p-12 max-w-screen-lg ml-auto mr-auto content">{children}</div>
             </div>
         </body>
         </html>

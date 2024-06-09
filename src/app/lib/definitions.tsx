@@ -10,3 +10,12 @@ export type Blockquote = {
     children: React.ReactNode;
     from?: React.ReactNode | string;
 }
+
+export type TodoItem = {
+    name: string;
+    done?: boolean;
+}
+
+export type TodoList = {
+    options: TodoItem[];
+}
