@@ -9,6 +9,3 @@
 
 ## JS
 [Дорожная карта](https://roadmap.sh/javascript)
-
-### TODO:
-- [ ] 
