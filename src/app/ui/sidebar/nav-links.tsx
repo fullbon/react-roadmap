@@ -31,7 +31,7 @@ function NavLink(link: NavLinkType) {
         setOpenSubLinks(isActiveLink);
     }, [isActiveLink]);
 
-    const toggleOpenSubLinks = (e) => {
+    const toggleOpenSubLinks = (e: React.MouseEvent<HTMLParagraphElement>) => {
         e.preventDefault();
         setOpenSubLinks(!openSubLinks);
     }
