@@ -1,4 +1,4 @@
-# JS/React road map
+# JS/React Roadmap
 
 Идея проекта пришла во время самообучения.
 
