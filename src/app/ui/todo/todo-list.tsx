@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { TodoList } from '@/app/lib/definitions';
+import type { TodoList } from '@/app/lib/definitions';
 import clsx from 'clsx';
 
 export default function TodoList(props: TodoList) {
