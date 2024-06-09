@@ -67,7 +67,7 @@ function NavLink(link: NavLinkType) {
                             return <NavLink
                                 key={subLink.href}
                                 pathname={link.pathname}
-                                {...subLink}
+                                name={link.name}
                                 href={link.href + subLink.href}
                             />
                         })}
