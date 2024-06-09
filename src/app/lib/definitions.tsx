@@ -19,3 +19,12 @@ export type TodoItem = {
 export type TodoList = {
     options: TodoItem[];
 }
+
+export type TimelineItem = {
+    date: string | number;
+    text: string;
+}
+
+export type Timeline = {
+    options: TimelineItem[];
+}

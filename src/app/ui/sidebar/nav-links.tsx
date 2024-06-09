@@ -10,12 +10,30 @@ import { ChevronLeftIcon } from '@heroicons/react/16/solid';
 
 const links = [
     {
-        name: 'JS',
+        name: 'JavaScript',
         href: '/js',
         subLinks: [
             {
                 name: '1. Введение в JavaScript',
                 href: '/introduction-to-js',
+                subLinks: [
+                    {
+                        name: '1.1. Что такое JS',
+                        href: '/what-is-js',
+                    },
+                    {
+                        name: '1.2. История JS',
+                        href: '/history-of-js',
+                    },
+                    {
+                        name: '1.3. Версии JS',
+                        href: '/versions-of-js',
+                    },
+                    {
+                        name: '1.4. Как запустить JS?',
+                        href: '/how-to-run-js',
+                    },
+                ]
             },
         ],
     },
@@ -44,7 +62,7 @@ function NavLink(link: NavLinkType) {
                 key={link.name}
                 href={link.href}
                 className={clsx(
-                    'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+                    'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3 md:mb-2',
                     {
                         'bg-sky-100 text-blue-600': isActiveLink,
                     },
