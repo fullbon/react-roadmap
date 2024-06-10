@@ -6,7 +6,7 @@ export default function Footer() {
         <div
             className="w-full flex h-full items-end">
             <ul className="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 ml-5 space-x-4">
-                <li>
+                <li className='list-none'>
                     <a href="https://github.com/fullbon/react-roadmap"
                        target='_blank'
                        className="hover:underline me-4 md:me-6">
@@ -19,7 +19,7 @@ export default function Footer() {
                         />
                     </a>
                 </li>
-                <li>
+                <li className='list-none'>
                     <a href="https://t.me/ioioiooioioioo"
                        target='_blank'
                        className="hover:underline me-4 md:me-6">
