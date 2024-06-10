@@ -24,7 +24,8 @@ export default function CodeBlock(props: PropsType) {
     } = props;
 
     const execute = () => {
-        const codeExecResult = [];
+        let codeExecResult: any[];
+        codeExecResult = [];
         const code = children.replace(/console.log\((.*)\)/g, 'codeExecResult.push($1)');
 
         eval(code);
