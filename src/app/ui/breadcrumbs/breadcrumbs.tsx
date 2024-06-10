@@ -19,7 +19,7 @@ export default function Breadcrumbs() {
                 url += '/' + pathnameParts[i];
             }
 
-            return <>
+            return <span key={urlPart + index}>
                 {
                     index !== (pathnameParts.length - 1)
                         ? <Link href={url}>{urlPart}</Link>
@@ -30,7 +30,7 @@ export default function Breadcrumbs() {
                         ? '  /  '
                         : null
                 }
-            </>
+            </span>
         })}
         <br />
     </>
