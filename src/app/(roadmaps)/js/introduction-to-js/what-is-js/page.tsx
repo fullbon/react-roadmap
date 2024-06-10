@@ -1,5 +1,10 @@
 import Blockquote from '@/app/ui/text/blockquote';
 import TodoList from '@/app/ui/todo/todo-list';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Что такое JS?',
+};
 
 const needToLearning = [
     'JavaScript (JS) — это язык программирования, который используется как на стороне клиента, так и на стороне сервера',

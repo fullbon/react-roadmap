@@ -1,4 +1,9 @@
 import Timeline from '@/app/ui/timeline/timeline';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'История JS',
+};
 
 const historyTimeLine = [
     {
@@ -11,7 +16,7 @@ const historyTimeLine = [
     },
     {
         date: 'июнь 1997',
-        text: 'Была выпущена первая спецификация ECMAScript для стандартизации JavaScript - ES1',
+        text: 'Была выпущена первая спецификация ECMAScript для стандартизации JavaScript – ES1',
     },
     {
         date: 'июнь 1998',
@@ -27,7 +32,7 @@ const historyTimeLine = [
     },
     {
         date: '2015-н.в.',
-        text: 'Выпуски ES6/ES2015 - ES[x]/ES[yyyy]. Начиная с 2015 года спецификации выпускаются ежегодно и имеют соответствующие названия',
+        text: 'Выпуски ES6/ES2015 – ES[x]/ES[yyyy]. Начиная с 2015 года спецификации выпускаются ежегодно и имеют соответствующие названия',
     },
 ];
 

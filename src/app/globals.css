@@ -31,11 +31,11 @@ h1,h2,h3 {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 h3 {
@@ -53,4 +53,22 @@ h4 {
 .blockquote-from a {
   color: rgb(var(--foreground-rgb));
   text-decoration: underline;
+}
+
+ul {
+  margin-left: 40px;
+}
+
+ol {
+  margin-left: 40px;
+}
+
+ul li {
+  list-style: square;
+  margin-top: 0.75rem
+}
+
+ol li {
+  list-style-type: decimal;
+  margin-top: 0.75rem
 }

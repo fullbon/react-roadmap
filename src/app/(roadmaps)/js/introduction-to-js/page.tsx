@@ -1,6 +1,11 @@
 import Blockquote from '@/app/ui/text/blockquote';
 import TodoList from '@/app/ui/todo/todo-list';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Введение в JS',
+};
 
 export default function Introduction() {
     return <>
