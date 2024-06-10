@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 import Blockquote from '@/app/ui/text/blockquote';
-import CodeBlock from '@/app/ui/text/code-block';
+import CodeBlock from '@/app/ui/code/code-block';
 
 export const metadata: Metadata = {
     title: 'ECMAScript',

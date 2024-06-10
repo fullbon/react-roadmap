@@ -1,9 +1,9 @@
 'use client';
 
+import createElement from 'react-syntax-highlighter/dist/cjs/create-element';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import React from 'react';
-import { exec } from 'child_process';
 
 type PropsType = {
     children: string;
