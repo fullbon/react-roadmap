@@ -1,4 +1,9 @@
 import Blockquote from '@/app/ui/text/blockquote';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'ES1',
+};
 
 export default function Page() {
     return <>

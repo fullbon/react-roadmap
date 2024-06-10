@@ -1,4 +1,9 @@
 import CodeBlock from '@/app/ui/code/code-block';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'ES5',
+};
 
 export default function Page() {
     return <>
