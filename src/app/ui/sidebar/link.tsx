@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-const checkIsActive = (urlPartList, hrefPartList) => {
+const checkIsActive = (urlPartList: string[], hrefPartList: string[]) => {
     for (let i = 1; i < hrefPartList.length; i++) {
         if (urlPartList[i] !== hrefPartList[i]) {
             return false
