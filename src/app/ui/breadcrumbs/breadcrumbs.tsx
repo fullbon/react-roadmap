@@ -13,29 +13,32 @@ export default function Breadcrumbs() {
     }
 
     return <>
-        {pathnameParts.map((urlPart, index) => {
-            if (!urlPart) {
-                return null;
-            }
-
-            let url = '';
-            for (let i = 1; i <= index; i++) {
-                url += '/' + pathnameParts[i];
-            }
-
-            return <span key={urlPart + index}>
-                {
-                    index !== (pathnameParts.length - 1)
-                        ? <Link href={url}>{urlPart}</Link>
-                        : urlPart
+        <div className='flex justify-between items-center'>
+            <div>
+            {pathnameParts.map((urlPart, index) => {
+                if (!urlPart) {
+                    return null;
                 }
-                {
-                    index !== (pathnameParts.length - 1)
-                        ? '  /  '
-                        : null
+
+                let url = '';
+                for (let i = 1; i <= index; i++) {
+                    url += '/' + pathnameParts[i];
                 }
-            </span>
-        })}
-        <br />
+
+                return <span key={urlPart + index}>
+                    {
+                        index !== (pathnameParts.length - 1)
+                            ? <Link href={url}>{urlPart}</Link>
+                            : urlPart
+                    }
+                    {
+                        index !== (pathnameParts.length - 1)
+                            ? '  /  '
+                            : null
+                    }
+                </span>
+            })}
+            </div>
+        </div>
     </>
 }
