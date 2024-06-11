@@ -15,7 +15,7 @@ export default function NotFound() {
 
     React.useEffect(() => {
         setOfferKey(Math.floor(Math.random() * offers.length));
-    })
+    }, [])
 
     return (
         <div className="flex h-full flex-col items-center justify-center gap-2">
