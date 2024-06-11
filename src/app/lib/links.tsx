@@ -42,46 +42,52 @@ const links = [
                             {
                                 name: 'ES6 (2015)',
                                 href: '/js/introduction-to-js/versions-of-js/es6',
-                                status: 'in-work'
+                                status: 'at-work'
                             },
                             {
                                 name: 'ES7 (2016)',
                                 href: '/js/introduction-to-js/versions-of-js/es7',
-                                status: 'todo'
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES8 (2017)',
                                 href: '/js/introduction-to-js/versions-of-js/es8',
-                                status: 'todo'
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES9 (2018)',
                                 href: '/js/introduction-to-js/versions-of-js/es9',
-                                status: 'todo'
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES10 (2019)',
                                 href: '/js/introduction-to-js/versions-of-js/es10',
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES11 (2020)',
                                 href: '/js/introduction-to-js/versions-of-js/es11',
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES12 (2021)',
                                 href: '/js/introduction-to-js/versions-of-js/es12',
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES13 (2022)',
                                 href: '/js/introduction-to-js/versions-of-js/es13',
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES14 (2023)',
                                 href: '/js/introduction-to-js/versions-of-js/es14',
+                                status: 'to-do'
                             },
                             {
                                 name: 'ES15 (2024)',
                                 href: '/js/introduction-to-js/versions-of-js/es15',
+                                status: 'to-do'
                             },
                         ]
                     },
@@ -93,7 +99,8 @@ const links = [
             },
             {
                 name: '2. Переменные',
-                href: '/js/all-about-variables'
+                href: '/js/all-about-variables',
+                status: 'at-work'
             }
         ],
     },

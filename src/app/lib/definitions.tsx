@@ -4,6 +4,7 @@ export type NavLink = {
     name: string;
     href: string;
     subLinks?: NavLink[];
+    status?: 'at-work' | 'to-do';
 }
 
 export type Blockquote = {
