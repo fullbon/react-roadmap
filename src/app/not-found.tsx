@@ -11,7 +11,7 @@ const offers = [
 ];
 
 export default function NotFound() {
-    const [offerKey, setOfferKey] = React.useState(0);
+    const [offerKey, setOfferKey] = React.useState<number|null>(null);
 
     React.useEffect(() => {
         setOfferKey(Math.floor(Math.random() * offers.length));
@@ -19,9 +19,14 @@ export default function NotFound() {
 
     return (
         <div className="flex h-full flex-col items-center justify-center gap-2">
-            <h2 className="text-xl font-semibold">Кто здесь?</h2>
-            <p>Тут страницы нет, да и не было вроде никогда :\</p>
-            <p>Давай лучше почитаем про <Link prefetch href={offers[offerKey].link}>{offers[offerKey].name}</Link></p>
+            {offerKey === null
+                ? <p>Загрузка...</p>
+                : <>
+                    <h2 className="text-xl font-semibold">Кто здесь?</h2>
+                    <p>Тут страницы нет, да и не было вроде никогда :\</p>
+                    <p>Давай лучше почитаем про <Link prefetch href={offers[offerKey].link}>{offers[offerKey].name}</Link></p>
+                </>
+            }
         </div>
     );
 }
