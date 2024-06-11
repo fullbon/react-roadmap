@@ -10,7 +10,7 @@ export default function Page() {
         <h2>ES5 (2009)</h2>
         <p>Спустя 10 лет после выхода ES3 была выпущена ES5. Из нововведений</p>
         <ul>
-            <li>
+            <li id='use-strict'>
                 <b>use strict</b>
                 <p>Строгий режим - это директива, при которой для кода вводятся некоторые ограничения, а именно запрещены:</p>
                 <CodeBlock>
@@ -72,10 +72,10 @@ myFunction();
                 </CodeBlock>
                 <p>Для работы <b>use strict</b> должна стоять на первой строчке скрипта</p>
             </li>
-            <li>
+            <li id='array-methods'>
                 <b>Новые методы для работы с массивами</b>
                 <ol>
-                    <li>
+                    <li id='isArray'>
                         <b>isArray()</b>
                         <p>Проверяет, является ли переменная массивом</p>
                         <CodeBlock>
@@ -92,7 +92,7 @@ console.log(Array.isArray(obj));`
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='forEach'>
                         <b>forEach()</b>
                         <p>Применяет переданную функцию к каждому элементу массива</p>
                         <CodeBlock>
@@ -105,7 +105,7 @@ arr.forEach(function(num) {
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='map'>
                         <b>map()</b>
                         <p>Возвращает новый массив, измененный переданной функцией</p>
                         <CodeBlock>
@@ -121,7 +121,7 @@ console.log('Имена: ', names);`
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='filter'>
                         <b>filter()</b>
                         <p>Возвращает новый массив, отфильтрованный по переданным условиям</p>
                         <CodeBlock>
@@ -137,7 +137,7 @@ console.log('Совершеннолетние: ', adults);`
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='reduce'>
                         <b>reduce()</b>
                         <p>Применяет функцию к каждому элементу массива и приводит массив к одному элементу</p>
                         <p>Функцию часто используют для вычисления суммы элементов массива (см. пример)</p>
@@ -162,11 +162,11 @@ const oldest = users.reduce((potentialOldestUser, currentUser) => {
     }
     return potentialOldestUser;
 }, users[0]);
-console.log('Самый взрослый: ', oldest);`
+console.log('Самый взрослый: ', oldest.name);`
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='reduceRight'>
                         <b>reduceRight()</b>
                         <p>То же, что и reduce, но проходим по массиву справа налево</p>
                         <CodeBlock>
@@ -187,11 +187,11 @@ const oldest = users.reduceRight((potentialOldestUser, currentUser) => {
     }
     return potentialOldestUser;
 }, users[0]);
-console.log('Самый взрослый: ', oldest);`
+console.log('Самый взрослый: ', oldest.name);`
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='every'>
                         <b>every()</b>
                         <p>Проверяет, что каждый из элементов массива удовлетворяет переданным условиям</p>
                         <CodeBlock>
@@ -220,7 +220,7 @@ if (everyIsAdult) {
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='some'>
                         <b>some()</b>
                         <p>Работает аналогично `<b>every()</b>`, но возвращает true, если хотя бы один элемент массива удовлетворяет условиям</p>
                         <CodeBlock>
@@ -249,7 +249,7 @@ if (teenagerAmongUs) {
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='indexOf'>
                         <b>indexOf()</b>
                         <p>Возвращает позицию первого совпадения. Если совпадений нет возвращает `-1`</p>
                         <CodeBlock>
@@ -265,7 +265,7 @@ if (whereIsLeha !== -1) {
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='lastIndexOf'>
                         <b>lastIndexOf()</b>
                         <p>Возвращает позицию последнего совпадения. Если совпадений нет возвращает `-1`</p>
                         <CodeBlock>
@@ -281,7 +281,7 @@ if (whereIsLeha !== -1) {
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='json'>
                         <b>Поддержка JSON</b>
                         <p>Основные методы:</p>
                         <ol>
@@ -311,10 +311,10 @@ console.log(JSON.stringify(obj));`
                     </li>
                 </ol>
             </li>
-            <li>
+            <li id='date-methods'>
                 <b>Новые методы для работы с датой</b>
                 <ul>
-                    <li>
+                    <li id='now'>
                         <b>now()</b>
                         <p>Возвращает количество миллисекунд, прошедших с 01.01.1970 по текущую дату</p>
                         <CodeBlock>
@@ -323,7 +323,7 @@ console.log(JSON.stringify(obj));`
                             }
                         </CodeBlock>
                     </li>
-                    <li>
+                    <li id='valueOf'>
                         <b>valueOf()</b>
                         <p>Возвращает кол-во миллисекунд, прошедших с 01.01.1970 по выбранную дату</p>
                         <CodeBlock>
@@ -335,7 +335,7 @@ console.log(date.valueOf() + ' миллисекунд прошло с 01.01.1970
                     </li>
                 </ul>
             </li>
-            <li>
+            <li id='get-set'>
                 <b>Геттеры и сеттеры (get и set)</b>
                 <p>Помимо обычных свойств-данных у объекта появляются свойства-аксессоры. Это функции, которые позволяют получать и присваивать значения</p>
                 <CodeBlock>
