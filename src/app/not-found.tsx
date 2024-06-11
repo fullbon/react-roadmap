@@ -1,5 +1,7 @@
+'use client';
+
+import * as React from 'react';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
 
 const offers = [
     { name: 'историю JavaScript', link: '/js/introduction-to-js/history-of-js' },
@@ -11,7 +13,7 @@ const offers = [
 export default function NotFound() {
     const [offerKey, setOfferKey] = React.useState(0);
 
-    useEffect(() => {
+    React.useEffect(() => {
         setOfferKey(Math.floor(Math.random() * offers.length));
     })
 
