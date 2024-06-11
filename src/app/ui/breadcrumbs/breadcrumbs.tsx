@@ -8,6 +8,10 @@ export default function Breadcrumbs() {
 
     const pathnameParts = pathname.split('/');
 
+    if (pathnameParts.length === 2) {
+        return null;
+    }
+
     return <>
         {pathnameParts.map((urlPart, index) => {
             if (!urlPart) {

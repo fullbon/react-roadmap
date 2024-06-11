@@ -12,7 +12,7 @@ export default function Sidenav() {
                     Roadmap
                 </div>
             </Link>
-            <div className="flex grow justify-between md:space-x-2 flex-col md:space-x-0 md:space-y-2">
+            <div className="flex grow justify-between flex-col">
                 <NavLinks />
             </div>
         </div>

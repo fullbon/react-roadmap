@@ -11,6 +11,7 @@ type PropsType = {
     showLineNumbers?: boolean;
     language?: string;
     canExecute?: boolean;
+    title?: string
 }
 
 export default function CodeBlock(props: PropsType) {
@@ -21,6 +22,7 @@ export default function CodeBlock(props: PropsType) {
         showLineNumbers = true,
         language = 'javascript',
         canExecute = true,
+        title
     } = props;
 
     const execute = () => {
@@ -48,7 +50,7 @@ export default function CodeBlock(props: PropsType) {
         setResult(null);
     }
 
-    return <div className='mt-3'>
+    return <div className='my-5'>
         <SyntaxHighlighter
             style={docco}
             wrapLines={wrapLines}
@@ -80,5 +82,6 @@ export default function CodeBlock(props: PropsType) {
                 </>
                 : null
         }
+        <div className='text-gray-400 text-center w-full'>{title}</div>
     </div>;
 }

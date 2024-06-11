@@ -28,3 +28,11 @@ export type TimelineItem = {
 export type Timeline = {
     options: TimelineItem[];
 }
+
+export type FooterLinkType = {
+    href: string;
+    svgPath: string;
+    alt: string;
+    title?: string;
+    className?: string;
+}
