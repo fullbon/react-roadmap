@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React, { useEffect } from 'react';
 
 const offers = [
     { name: 'историю JavaScript', link: '/js/introduction-to-js/history-of-js' },
@@ -8,13 +9,17 @@ const offers = [
 ];
 
 export default function NotFound() {
-    const randOffer = offers[Math.floor(Math.random() * offers.length)];
+    const [offerKey, setOfferKey] = React.useState(0);
+
+    useEffect(() => {
+        setOfferKey(Math.floor(Math.random() * offers.length));
+    })
 
     return (
         <div className="flex h-full flex-col items-center justify-center gap-2">
             <h2 className="text-xl font-semibold">Кто здесь?</h2>
             <p>Тут страницы нет, да и не было вроде никогда :\</p>
-            <p>Давай лучше почитаем про <Link href={randOffer.link}>{randOffer.name}</Link></p>
+            <p>Давай лучше почитаем про <Link href={offers[offerKey].link}>{offers[offerKey].name}</Link></p>
         </div>
     );
 }
