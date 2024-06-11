@@ -5,10 +5,24 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import clsx from 'clsx';
 
+const checkIsActive = (urlPartList, hrefPartList) => {
+    for (let i = 1; i < hrefPartList.length; i++) {
+        if (urlPartList[i] !== hrefPartList[i]) {
+            return false
+        }
+    }
+
+    return true;
+}
+
 export default function NavLink(link: NavLinkType) {
     const pathname = usePathname();
 
-    const isActiveLink = pathname.indexOf(link.href) !== -1;
+    const [isActiveLink, setIsActiveLink] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsActiveLink(checkIsActive(pathname.split('/'), link.href.split('/')))
+    }, [pathname])
 
     const [openSubLinks, setOpenSubLinks] = React.useState(isActiveLink);
 
@@ -52,7 +66,7 @@ export default function NavLink(link: NavLinkType) {
                             return <NavLink
                                 key={subLink.href}
                                 {...subLink}
-                                href={link.href + subLink.href}
+                                href={subLink.href}
                             />
                         })}
                     </div>

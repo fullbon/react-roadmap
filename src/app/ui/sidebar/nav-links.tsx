@@ -5,7 +5,6 @@ import { NavLink as NavLinkType } from '@/app/lib/definitions';
 import links from '@/app/lib/links';
 import NavLink from '@/app/ui/sidebar/link';
 
-
 export default function NavLinks() {
     return (
         <>

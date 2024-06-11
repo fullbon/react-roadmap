@@ -11,8 +11,9 @@ function FooterLink(props: FooterLinkType) {
             <Image
                 priority
                 src={props.svgPath}
-                height={24}
-                width={24}
+                style={{ width: '24px', height: 'auto' }}
+                height={0}
+                width={0}
                 alt={props.alt}
             />
         </a>
