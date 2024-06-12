@@ -13,7 +13,10 @@ export const metadata: Metadata = {
         default: 'Roadmap',
     },
     description: 'Дорожная карта React разработчика',
-    mobileWebAppCapable: 'yes',
+    appleWebApp: {
+        capable: 'yes'
+    },
+
     appleMobileWebAppCapable: 'yes',
 };
 
