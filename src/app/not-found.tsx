@@ -18,7 +18,7 @@ export default function NotFound() {
     }, [])
 
     return (
-        <div className="flex h-full flex-col items-center justify-center gap-2">
+        <div className="flex h-full flex-col items-center justify-center gap-2 mb-24 md:mb-0">
             {offerKey === null
                 ? <p>Загрузка...</p>
                 : <>
