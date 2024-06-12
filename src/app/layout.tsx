@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     appleWebApp: {
         capable: true
     },
-    appleMobileWebAppCapable: 'yes',
 };
 
 export default function RootLayout({
