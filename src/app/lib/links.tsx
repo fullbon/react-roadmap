@@ -104,7 +104,7 @@ const links = [
             }
         ],
     },
-    { name: 'React', href: '/react' },
+    { name: 'React', href: '/react', status: 'to-do'},
 ];
 
 export default links;

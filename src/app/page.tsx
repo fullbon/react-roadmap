@@ -44,7 +44,7 @@ export default function Home() {
                 <div className='w-44 rounded-md bg-gray-50 p-3 text-sm font-medium bg-green-100 hover:bg-green-200 hover:text-green-900 text-center cursor-pointer'>
                     В работе
                 </div>
-                <div className='w-44 rounded-md p-3 text-sm font-medium bg-red-50 hover:bg-red-50 text-red-900 cursor-default text-center'>
+                <div className='w-44 rounded-md p-3 text-sm font-medium bg-red-50 hover:bg-red-200 hover:text-red-900 cursor-pointer text-center'>
                     TODO
                 </div>
             </div>
