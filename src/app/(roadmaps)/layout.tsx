@@ -6,9 +6,9 @@ type LayoutType = {
 };
 
 export default function Layout({children}: LayoutType) {
-    return <>
+    return <div className={'pb-48'}>
         <Breadcrumbs />
         <br />
         {children}
-    </>
+    </div>
 }

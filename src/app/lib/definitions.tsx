@@ -37,3 +37,7 @@ export type FooterLinkType = {
     title?: string;
     className?: string;
 }
+
+export type OneLineCode = {
+    children: string
+}

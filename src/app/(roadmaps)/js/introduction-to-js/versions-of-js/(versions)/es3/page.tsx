@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return <>
-        <h2>ES3 (1999)</h2>
+        <h1>ES3 (1999)</h1>
         <p>ECMAScript 3 выпущен в 1999 году. Он внес большие и долгожданные изменения в спецификацию:</p>
         <ul>
             <li id='strict-equal'>

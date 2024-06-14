@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return <>
-        <h2>ES4</h2>
+        <h1>ES4</h1>
         <p>Так и не вышла :(</p>
     </>
 }

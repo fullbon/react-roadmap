@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return <>
-        <h2>ES5 (2009)</h2>
+        <h1>ES5 (2009)</h1>
         <p>Спустя 10 лет после выхода ES3 была выпущена ES5. Из нововведений</p>
         <ul>
             <li id='use-strict'>
