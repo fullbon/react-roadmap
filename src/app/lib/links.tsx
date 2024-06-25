@@ -104,21 +104,19 @@ const links = [
                     {
                         name: 'Объявление переменных',
                         href: '/js/all-about-variables/var-declarations',
-                        status: 'to-do',
-                        subLinks: [
-                            {
-                                name: 'var',
-                                href: '/js/all-about-variables/var-declarations/var',
-                            },
-                            {
-                                name: 'let',
-                                href: '/js/all-about-variables/var-declarations/let',
-                            },
-                            {
-                                name: 'const',
-                                href: '/js/all-about-variables/var-declarations/const',
-                            },
-                        ],
+                    },
+                    {
+                        name: 'Hoisting (Подъем)',
+                        href: '/js/all-about-variables/hoisting',
+                    },
+                    {
+                        name: 'Имена переменных',
+                        href: '/js/all-about-variables/naming-variables',
+                    },
+                    {
+                        name: 'Области видимости',
+                        href: '/js/all-about-variables/scopes',
+                        status: 'at-work',
                     },
                 ],
             },

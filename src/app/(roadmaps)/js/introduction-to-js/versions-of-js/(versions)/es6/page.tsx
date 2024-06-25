@@ -407,7 +407,7 @@ console.log(colors[BLACK]);`
                 <Link href={'https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Template_literals#%D1%82%D0%B5%D0%B3%D0%BE%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B'}
                       target={'_blank'}
                 >
-                    Тегированные шаблонные строки <OneLineCode></OneLineCode>
+                    Тегированные шаблонные строки <OneLineCode>tag`hello world`</OneLineCode>
                 </Link>
             </li>
             <li id={'generators'}>
