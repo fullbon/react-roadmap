@@ -1,7 +1,7 @@
-import Blockquote from '@/app/ui/text/blockquote';
 import { Metadata } from 'next';
 import OneLineCode from '@/app/ui/code/one-line-code';
 import CodeBlock from '@/app/ui/code/code-block';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: 'ES6',
@@ -231,9 +231,10 @@ console.log(Math.sign(z));
                 <CodeBlock>
                     {
 `const rand = Math.random() * 10;
+const withoutComma = Math.trunc(rand);
 
 console.log(rand);
-console.log(Math.trunc(rand));`
+console.log(\`Число без запятой: \$\{withoutComma\}\`);`
                     }
                 </CodeBlock>
             </li>
@@ -242,9 +243,10 @@ console.log(Math.trunc(rand));`
                 <CodeBlock>
                     {
 `const rand = Math.pow(Math.trunc(Math.random() * 10), 3);
+const cbrt = Math.cbrt(rand);
 
 console.log(rand);
-console.log(Math.cbrt(rand));`
+console.log(\`Кубический корень: \$\{cbrt\}\`);`
                     }
                 </CodeBlock>
             </li>
@@ -255,5 +257,180 @@ console.log(Math.cbrt(rand));`
                 </a>
             </li>
         </ol>
+
+        <h2 id={'spread-rest'}>Операторы <OneLineCode>spread</OneLineCode> и <OneLineCode>rest</OneLineCode></h2>
+        <p>Оператор распространения <OneLineCode>spread</OneLineCode> используется для разбиения массива или объекта на отдельные аргументы</p>
+        <p>Обозначается через <OneLineCode>...</OneLineCode></p>
+        <br />
+        <p>Пример использования:</p>
+        <p>
+            <CodeBlock>
+                {
+`const numbers = [1,2,3,4,5,6,7,-1,-2,-3];
+
+// Math.max ожидает список аргументов типа 'number', поэтому попытка вызова Math.max(numbers) приведет к ошибке
+const max = Math.max(...numbers);
+console.log(max); // 7`
+                }
+            </CodeBlock>
+        </p>
+        <br />
+        <p>Оператор остатка <OneLineCode>rest</OneLineCode> имеет такой же синтаксис, но используется, наоборот, для сбора аргументов в массив</p>
+        <CodeBlock>
+            {
+`function log(firstValue, ...args) {
+    console.log('Первое значение: ' + firstValue);
+    console.log('Остальные: ' + args.join(', '));
+}
+
+log(1, 2, 3, 4);
+log(5);`
+            }
+        </CodeBlock>
+
+        <h2 id={'destructuring'}>Деструктуризация</h2>
+        Деструктуризация позволяет вытащить значение из объекта или массива и присвоить его к переменной
+        <CodeBlock>
+            {
+`const user = {
+    name: 'Пользователь',
+    city: 'Омск',
+    phone: '1234',
+}
+
+const { name } = user;
+console.log(name);
+
+const values = [1,2,3,4,5];
+const [, ,thirdValue] = values; // пропускаем первые два значения
+console.log(thirdValue);`
+            }
+        </CodeBlock>
+        <p>Отлично сочетается с <OneLineCode>spread-rest</OneLineCode> операторами</p>
+        <CodeBlock>
+            {
+`const values = [1,2,3,4,5];
+const [, , ...lastValues] = values; // пропускаем первые два значения
+
+console.log(lastValues);`
+            }
+        </CodeBlock>
+
+        <h2 id={'default-params'}>Параметры по умолчанию</h2>
+        <p>
+            <CodeBlock>
+                {
+`function sum(a, b = 5) { return a + b; }
+console.log(sum(2)); // 2 + 5
+console.log(sum(3, 1)); // 3 + 1`
+                }
+            </CodeBlock>
+        </p>
+
+        <h2 id={'modules'}>Модули</h2>
+        <p>
+            <CodeBlock>
+                {
+                    `// sum.js
+export default function sum(a, b) {
+    return a + b;
+}
+
+// index.js
+import sum from './sum';
+const sum = sum(10, 5);`
+                }
+            </CodeBlock>
+        </p>
+
+        <h2 id={'classes'}>Классы</h2>
+        <p>
+            <CodeBlock>
+                {
+`class Animal {
+    constructor(name) {
+        this.name = name;
+        this.type = 'animal';
+    }
+    
+    getName() {
+        return this.name;
+    }
+    
+    getType() {
+        return this.type;
+    }
+}
+
+class Dog extends Animal {
+   constructor(name) {
+      super(name); // вызов конструктора родителя класса
+      this.type = 'dog';
+   }
+}
+
+const dog1 = new Dog('Sharik');
+console.log(dog1.getName());
+console.log(dog1.getType());`
+                }
+            </CodeBlock>
+        </p>
+
+        <h2 id={'symbols'}>Символы</h2>
+        <p>Новый примитивный тип данных, используется для создания уникальных идентификаторов</p>
+
+        <CodeBlock>
+            {
+`const WHITE = Symbol('Цвет'); // в качестве параметра передается описание символа
+const BLACK = Symbol('Цвет');
+
+const colors = {
+    [WHITE]: '#ffffff',
+    [BLACK]: '#000000'
+}
+
+console.log(colors[WHITE]);
+console.log(colors[BLACK]);`
+            }
+        </CodeBlock>
+
+        <h2>А также:</h2>
+        <ul>
+            <li id={'map-set'}>
+                <Link href={'https://learn.javascript.ru/map-set'}
+                      target={'_blank'}
+                >
+                    <OneLineCode>Map</OneLineCode> и <OneLineCode>Set</OneLineCode>
+                </Link>
+            </li>
+            <li id={'tag-template-strings'}>
+                <Link href={'https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Template_literals#%D1%82%D0%B5%D0%B3%D0%BE%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B'}
+                      target={'_blank'}
+                >
+                    Тегированные шаблонные строки <OneLineCode></OneLineCode>
+                </Link>
+            </li>
+            <li id={'generators'}>
+                <Link href={'https://learn.javascript.ru/generators'}
+                      target={'_blank'}
+                >
+                    Генераторы
+                </Link>
+            </li>
+            <li id={'proxy'}>
+                <Link href={'https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy'}
+                      target={'_blank'}
+                >
+                    Proxy
+                </Link>
+            </li>
+            <li id={'promise'}>
+                <Link href={'https://learn.javascript.ru/promise-basics'}
+                      target={'_blank'}
+                >
+                    Promise
+                </Link>
+            </li>
+        </ul>
     </>
 }

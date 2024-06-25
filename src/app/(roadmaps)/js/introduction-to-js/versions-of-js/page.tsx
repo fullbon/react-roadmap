@@ -15,10 +15,10 @@ export default function JsVersions() {
             <li><Link href={'versions-of-js/es3'}>ES3 (1999)</Link></li>
             <li><Link href={'versions-of-js/es4'}>ES4 (не вышла)</Link></li>
             <li><Link href={'versions-of-js/es5'}>ES5 (2009)</Link></li>
+            <li><Link href={'versions-of-js/es6'}>ES6 (2015)</Link></li>
 
             <br />
             <p><b>TODO</b></p>
-            <li><Link href={'versions-of-js/es6'}>ES6 (2015)</Link></li>
             <li><Link href={'versions-of-js/es7'}>ES7 (2016)</Link></li>
             <li><Link href={'versions-of-js/es8'}>ES8 (2017)</Link></li>
             <li><Link href={'versions-of-js/es9'}>ES9 (2018)</Link></li>
