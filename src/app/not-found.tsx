@@ -7,7 +7,10 @@ const offers = [
     { name: 'историю JavaScript', link: '/js/introduction-to-js/history-of-js' },
     { name: 'ECMAScript 3', link: '/js/introduction-to-js/versions-of-js/es3' },
     { name: 'ECMAScript 5', link: '/js/introduction-to-js/versions-of-js/es5' },
+    { name: 'ES6', link: '/js/introduction-to-js/versions-of-js/es6' },
     { name: 'переменные в JS', link: '/js/all-about-variables' },
+    { name: 'объявление переменных', link: '/js/all-about-variables/var-declarations' },
+    { name: 'именование переменных', link: '/js/all-about-variables/naming-variables' },
 ];
 
 export default function NotFound() {
