@@ -2,6 +2,7 @@ import Blockquote from '@/app/ui/text/blockquote';
 import TodoList from '@/app/ui/todo/todo-list';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import TableOfContents from '@/app/ui/table-of-contents/table-of-contents';
 
 export const metadata: Metadata = {
     title: 'Введение в JS',
@@ -17,6 +18,8 @@ export default function Introduction() {
             className="hidden md:block ml-auto mr-auto mb-5"
             alt="Скриншот с roadmap.sh"
         />
+
+        <TableOfContents/>
 
         <h2>Ссылки</h2>
         <ul className="mt-6 space-y-1">

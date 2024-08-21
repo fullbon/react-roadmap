@@ -8,13 +8,10 @@ type LayoutType = {
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | Roadmap',
-        default: 'Roadmap',
+        template: '%s | Собеседования',
+        default: 'Собеседования',
     },
-    description: 'Дорожная карта React разработчика',
-    appleWebApp: {
-        capable: true
-    },
+    description: 'Подготовка к собеседованиям',
 };
 
 

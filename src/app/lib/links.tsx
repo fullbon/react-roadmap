@@ -4,19 +4,19 @@ const links = [
         href: '/js',
         subLinks: [
             {
-                name: '1. Введение в JavaScript',
+                name: 'Введение в JavaScript',
                 href: '/js/introduction-to-js',
                 subLinks: [
                     {
-                        name: '1.1. Что такое JS',
+                        name: 'Что такое JS',
                         href: '/js/introduction-to-js/what-is-js',
                     },
                     {
-                        name: '1.2. История JS',
+                        name: 'История JS',
                         href: '/js/introduction-to-js/history-of-js',
                     },
                     {
-                        name: '1.3. Версии JS',
+                        name: 'Версии JS',
                         href: '/js/introduction-to-js/versions-of-js',
                         subLinks: [
                             {
@@ -91,13 +91,13 @@ const links = [
                         ],
                     },
                     {
-                        name: '1.4. Как запустить JS?',
+                        name: 'Как запустить JS?',
                         href: '/js/introduction-to-js//how-to-run-js',
                     },
                 ],
             },
             {
-                name: '2. Переменные',
+                name: 'Переменные',
                 href: '/js/all-about-variables',
                 status: 'at-work',
                 subLinks: [
@@ -123,6 +123,37 @@ const links = [
         ],
     },
     { name: 'React', href: '/react', status: 'to-do' },
+    {
+        name: 'Собеседования',
+        href: '/interviews',
+        status: 'at-work',
+        subLinks: [
+            {
+                name: 'PHP',
+                href: '/interviews/php',
+                subLinks: [
+                    {
+                        name: 'Паттерны',
+                        href: '/interviews/php/patterns',
+                        subLinks: [
+                            {
+                                name: 'Порождающие',
+                                href: '/interviews/php/patterns/creational',
+                            },
+                            {
+                                name: 'Структурные',
+                                href: '/interviews/php/patterns/structural',
+                            },
+                            {
+                                name: 'Поведенческие',
+                                href: '/interviews/php/patterns/behavioral',
+                            },
+                        ]
+                    },
+                ]
+            }
+        ]
+    },
 ];
 
 export default links;

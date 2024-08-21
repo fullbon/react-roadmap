@@ -8,10 +8,7 @@ import Footer from '@/app/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: {
-        template: '%s | Roadmap',
-        default: 'Roadmap',
-    },
+    title: 'Roadmap',
     description: 'Дорожная карта React разработчика',
     appleWebApp: {
         capable: true

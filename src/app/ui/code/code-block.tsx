@@ -1,6 +1,5 @@
 'use client';
 
-import createElement from 'react-syntax-highlighter/dist/cjs/create-element';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import React from 'react';
@@ -11,7 +10,7 @@ type PropsType = {
     showLineNumbers?: boolean;
     language?: string;
     canExecute?: boolean;
-    title?: string
+    title?: string | React.JSX.Element
 }
 
 export default function CodeBlock(props: PropsType) {
