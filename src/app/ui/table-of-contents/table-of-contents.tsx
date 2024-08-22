@@ -6,7 +6,7 @@ import { NavLink as NavLinkType } from '@/app/lib/definitions';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-const findLink = (items, pathname) : NavLinkType[] => {
+const findLink = (items: NavLinkType[], pathname: string) : NavLinkType[] => {
     for (let obj of items) {
         if (obj.href === pathname) {
             if (obj.status === 'to-do') {

@@ -8,6 +8,15 @@ export const metadata: Metadata = {
 export default function Page() {
     return <>
         <h1>Паттерны проектирования</h1>
-        <TableOfContents/>
+
+        <p>
+            Более полную и красивую информацию можно почитать
+            на <a href={'https://refactoring.guru/ru/design-patterns/catalog'}
+               target={'_blank'}>
+                refactoring.guru
+            </a>
+        </p>
+        <br />
+        <TableOfContents />
     </>;
 }
