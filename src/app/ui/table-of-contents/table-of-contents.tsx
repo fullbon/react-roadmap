@@ -55,7 +55,7 @@ export default function TableOfContents() {
 
     useEffect(() => {
         setContent(findLink(links, pathname));
-    }, []);
+    }, [pathname]);
 
     if (content.length === 0) {
         return null;
